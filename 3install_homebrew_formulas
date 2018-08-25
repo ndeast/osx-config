@@ -1,0 +1,48 @@
+#! /usr/bin/env bash
+
+# DESCRIPTION
+# Installs Homebrew software.
+
+# EXECUTION
+# Homebrew
+if ! command -v brew > /dev/null; then
+  ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  export PATH="/usr/local/bin:$PATH"
+  printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
+fi
+
+xcode-select --install
+
+# Bash
+brew install bash
+
+# Git
+brew install git
+
+# Mac App Store CLI
+brew install mas
+
+# CocoaPods
+brew install cocoapods
+
+# tmux
+brew install tmux
+brew install reattach-to-user-namespace
+
+# Vim
+brew install vim
+
+# Z
+brew install z
+
+# Python 3
+brew install python
+
+# Mosh
+brew install mosh
+
+#source code pro
+brew tap caskroom/fonts && brew cask install font-source-code-pro
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
