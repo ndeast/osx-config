@@ -32,6 +32,9 @@ brew install reattach-to-user-namespace
 # Vim
 brew install vim
 
+#Neovim
+brew install neovim
+
 # Z
 brew install z
 

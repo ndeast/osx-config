@@ -27,4 +27,9 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
+#neovim
+mkdir -p "$HOME/.config/nvim"
+ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
+nvim +PlugInstall +qa
+
 echo 'finished'

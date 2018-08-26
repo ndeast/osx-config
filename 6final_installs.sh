@@ -28,3 +28,8 @@ git clone https://github.com/zsh-users/zsh-history-substring-search "${ZSH_CUSTO
 
 echo 'Installing ZSH completions'
 git clone https://github.com/zsh-users/zsh-completions "$HOME/.oh-my-zsh/custom/plugins/zsh-completions"
+
+# vim-plug plugin manager
+echo "Installing Vim-plug plugin manager into $HOME/.local/share/nvim/site/autoload/plug.vim..."
+curl -sfLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo "Done"
