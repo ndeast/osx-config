@@ -7,7 +7,7 @@ echo 'Installing Powerline Status'
 pip install powerline-status
 
 echo 'Installing Powerline Fonts'
-cd ~/Desktop
+cd ~
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
@@ -28,6 +28,10 @@ git clone https://github.com/zsh-users/zsh-history-substring-search "${ZSH_CUSTO
 
 echo 'Installing ZSH completions'
 git clone https://github.com/zsh-users/zsh-completions "$HOME/.oh-my-zsh/custom/plugins/zsh-completions"
+
+echo 'Installing iTerm2 Shell Integration'
+curl -L https://iterm2.com/shell_integration/zsh \
+-o ~/.iterm2_shell_integration.zsh
 
 # vim-plug plugin manager
 echo "Installing Vim-plug plugin manager into $HOME/.local/share/nvim/site/autoload/plug.vim..."
