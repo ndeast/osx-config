@@ -15,7 +15,7 @@ cd ..
 rm -rf fonts
 
 echo 'Installing ZSH Imp Theme'
-mkdir -p $ZSH_CUSTOM/themes && curl https://raw.githubusercontent.com/igormp/Imp/master/imp.zsh-theme -L -o $ZSH_CUSTOM/themes/imp.zsh-theme
+mkdir -p $ZSH_CUSTOM/themes && curl https://raw.githubusercontent.com/ndeast/Imp/master/imp.zsh-theme -L -o $ZSH_CUSTOM/themes/imp.zsh-theme
 
 echo 'Installing ZSH autosuggestions'
 git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.zsh/zsh-autosuggestions/"
