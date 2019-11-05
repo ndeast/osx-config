@@ -11,8 +11,14 @@ if ! command -v mas > /dev/null; then
   exit 1
 fi
 
+#1password7
+mas install 1333542190
+
 # Magnet
 mas install 441258766
+
+# Wipr
+mas install 1320666476
 
 # Telegram
 mas install 747648890

@@ -27,9 +27,6 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 printf "System - Disable shake to find cursor\n"
 defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
 
-printf "System - Enable Dark Mode\n"
-defaults write NSGlobalDomain AppleInterfaceStyle Dark
-
 printf "System - Expand save panel by default\n"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -47,6 +44,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 printf "System - Disable smart quotes (not useful when writing code)\n"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+printf "%s\n" "System - Disable software updates."
+sudo softwareupdate --schedule off
 
 printf "System - Disable smart dashes (not useful when writing code)\n"
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
@@ -68,19 +68,19 @@ sudo softwareupdate --schedule off
 # SSD-specific tweaks                                                         #
 ###############################################################################
 
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+# # Disable hibernation (speeds up entering sleep mode)
+# sudo pmset -a hibernatemode 0
 
-# Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+# # Remove the sleep image file to save disk space
+# sudo rm /private/var/vm/sleepimage
+# # Create a zero-byte file instead…
+# sudo touch /private/var/vm/sleepimage
+# # …and make sure it can’t be rewritten
+# sudo chflags uchg /private/var/vm/sleepimage
 
-# Save screenshots to the desktop
+# Save screenshots to a directory
 printf "System - set screenshot directory"
-defaults write com.apple.screencapture location -string "${HOME}/screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 printf "System - set screenshot format to png"
@@ -168,10 +168,10 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Show icons for hard drives, servers, and removable media on the desktop
 printf "Finder - Show desktop icons for drives"
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # When performing a search, search the current folder by default
 printf "Finder - Search current folder by default"

@@ -37,3 +37,6 @@ curl -L https://iterm2.com/shell_integration/zsh \
 echo "Installing Vim-plug plugin manager into $HOME/.local/share/nvim/site/autoload/plug.vim..."
 curl -sfLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "Done"
+
+echo "Installing Intero"
+stack build intero --copy-compiler-tool

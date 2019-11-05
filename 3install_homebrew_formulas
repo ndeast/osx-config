@@ -44,6 +44,18 @@ brew install python
 # Mosh
 brew install mosh
 
+# Haskell
+brew install haskell-stack
+
+# Node
+brew install node
+
+# iPython
+brew install ipython
+
+brew install dark-mode
+dark-mode on
+
 #source code pro
 brew tap caskroom/fonts && brew cask install font-source-code-pro
 

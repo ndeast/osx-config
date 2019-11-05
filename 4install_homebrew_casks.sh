@@ -8,7 +8,6 @@ brew cask install google-chrome
 brew cask install telegram-desktop
 brew cask install firefox
 brew cask install handbrake
-brew cask install google-drive-file-stream
 brew cask install dropbox
 brew cask install appcleaner
 brew cask install bartender
@@ -25,9 +24,10 @@ brew cask install vlc
 brew cask install xld
 brew cask install discord
 brew cask install cyberduck
-brew cask install bettertouchtool
 brew cask install dash
 brew cask install adobe-acrobat-reader
 brew cask install mamp
 brew cask install Microsoft-office
-
+brew cask install private-internet-access
+brew cask install slack
+brew cask install virtualbox
