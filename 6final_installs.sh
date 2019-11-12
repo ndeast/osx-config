@@ -33,6 +33,9 @@ echo 'Installing iTerm2 Shell Integration'
 curl -L https://iterm2.com/shell_integration/zsh \
 -o ~/.iterm2_shell_integration.zsh
 
+echo 'Installying Poetry'
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
 # vim-plug plugin manager
 echo "Installing Vim-plug plugin manager into $HOME/.local/share/nvim/site/autoload/plug.vim..."
 curl -sfLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
