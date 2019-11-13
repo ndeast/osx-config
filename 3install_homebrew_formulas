@@ -53,6 +53,9 @@ brew install node
 # iPython
 brew install ipython
 
+# pyenv
+brew install pyenv
+
 brew install dark-mode
 dark-mode on
 

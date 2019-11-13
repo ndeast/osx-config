@@ -33,8 +33,14 @@ echo 'Installing iTerm2 Shell Integration'
 curl -L https://iterm2.com/shell_integration/zsh \
 -o ~/.iterm2_shell_integration.zsh
 
-echo 'Installying Poetry'
+echo 'Installing Poetry'
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
+poetry completions zsh > $(brew --prefix)/share/zsh/site-functions/_poetry
+
+echo 'Pyenv Setup'
+pyenv install 3.8.0
+pyenv global 3.8.0
 
 # vim-plug plugin manager
 echo "Installing Vim-plug plugin manager into $HOME/.local/share/nvim/site/autoload/plug.vim..."
