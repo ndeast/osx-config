@@ -196,6 +196,12 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 printf "Safari - Show bookmarks bar\n"
 defaults write com.apple.Safari ShowFavoritesBar -bool true
 
+printf "Safari - Show Full URL"
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+printf "Safari - Set search engine to Duck Duck Go"
+defaults write com.apple.Safari SearchProviderIdentifier -string "com.duckduckgo"
+
 printf "Safari - Use Contains instead of Starts With in search banners\n"
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
