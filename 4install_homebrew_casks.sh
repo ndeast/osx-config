@@ -10,7 +10,6 @@ brew cask install firefox
 brew cask install handbrake
 brew cask install dropbox
 brew cask install appcleaner
-brew cask install bartender
 brew cask install spotify
 brew cask install istat-menus
 brew cask install contexts
