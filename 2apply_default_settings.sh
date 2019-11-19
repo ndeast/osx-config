@@ -9,7 +9,7 @@ sudo -v
 # EXECUTION
 
 printf "System - Set highlight color to green"
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.937255 0.690196"
 
 printf "System - Always show scroll bars"
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"

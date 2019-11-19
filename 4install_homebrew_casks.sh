@@ -30,3 +30,4 @@ brew cask install Microsoft-office
 brew cask install private-internet-access
 brew cask install slack
 brew cask install virtualbox
+brew cask install gimp

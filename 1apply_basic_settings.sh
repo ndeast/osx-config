@@ -35,4 +35,4 @@ sudo scutil --set LocalHostName $mac_os_name
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $mac_os_name
 
 printf "Setting default desktop image (3200x2000@300).\n"
-sudo cp "$MAC_OS_CONFIG_PATH/lib/images/desktop_background.jpg" $HOME/Documents/default.jpg
+sudo cp "$MAC_OS_CONFIG_PATH/images/Wallpaper.jpg" $HOME/Documents/default.jpg
